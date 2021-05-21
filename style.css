@@ -1,0 +1,99 @@
+@import url('https://rsms.me/inter/inter.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Inter, "Inter UI", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.5rem;
+	letter-spacing: -0.04em;
+	line-height: 2rem;
+
+	background-color: #000;
+	background-image: url(res/background.svg);
+	background-size: 50vmin;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	padding: 2rem 3rem;
+}
+
+@media screen and (max-width: 40rem) {
+	body {
+		background-image: none;
+	}
+}
+
+.main-logo {
+	height: 6rem;
+	margin-left: -1.1rem;
+}
+
+p {
+	margin-top: 2rem;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+}
+
+nav > a {
+	display: flex;
+	align-items: center;
+
+	width: max-content;
+
+	text-decoration: none;
+	color: #fff;
+	opacity: 0.6;
+
+	transition: opacity 0.1s ease;
+}
+
+nav > a[href]:hover {
+	opacity: 0.8;
+}
+
+nav > a[href]::after {
+	content: "→";
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	transition: margin 0.2s ease;
+}
+
+nav > a[href]:hover::after {
+	margin-left: 0.8em;
+	margin-right: 0em;
+}
+
+nav > a.copy-link {
+	transition: color 0.5s ease, transform 0.5s ease;
+}
+nav > a.copy-link::after {
+	content: "";
+	background: url(res/copy-icon.svg);
+	background-size: 100%;
+	width: 1.75rem;
+	height: 1.75rem;
+	margin-bottom: 1px;
+	display: inline-block;
+}
+
+nav > a.copy-link:hover::after {
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+}
+
+nav > a.copy-link.copied {
+	color: #1EEBB0;
+	transform: translateY(0.2em);
+	transition: color 0.1s ease, transform 0.1s ease;
+}
