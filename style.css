@@ -55,11 +55,27 @@ nav > a {
 	color: #fff;
 	opacity: 0.6;
 
-	transition: opacity 0.1s ease;
+	margin-top: 0.2em;
+
+	transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 nav > a[href]:hover {
-	opacity: 0.8;
+	opacity: 1;
+	color: var(--link-colour);
+}
+
+nav > a::before {
+	content: "";
+	background: var(--link-icon);
+	background-color: currentColor;
+	background-size: 100%;
+	width: 1.75rem;
+	height: 1.75rem;
+	margin-right: 0.4em;
+	margin-bottom: 1px;
+	display: inline-block;
+	transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
 nav > a[href]::after {
@@ -75,11 +91,12 @@ nav > a[href]:hover::after {
 }
 
 nav > a.copy-link {
-	transition: color 0.5s ease, transform 0.5s ease;
+	transition: opacity 0.2s ease, color 0.2s ease, transform 0.5s ease;
 }
 nav > a.copy-link::after {
 	content: "";
-	background: url(res/copy-icon.svg);
+	background: url(res/icons/copy-cutout.svg);
+	background-color: currentColor;
 	background-size: 100%;
 	width: 1.75rem;
 	height: 1.75rem;
@@ -93,7 +110,7 @@ nav > a.copy-link:hover::after {
 }
 
 nav > a.copy-link.copied {
-	color: #1EEBB0;
 	transform: translateY(0.2em);
-	transition: color 0.1s ease, transform 0.1s ease;
+	color: #ccc;
+	transition: transform 0.05s ease;
 }
