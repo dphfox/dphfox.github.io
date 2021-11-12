@@ -95,7 +95,7 @@ nav > a.copy-link {
 }
 nav > a.copy-link::after {
 	content: "";
-	background: url(res/icons/copy-cutout.svg);
+	background: url(res/icons/pop-out-cutout.svg);
 	background-color: currentColor;
 	background-size: 100%;
 	width: 1.75rem;
