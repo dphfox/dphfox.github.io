@@ -6,111 +6,202 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--light-grey: #C8CED2;
+	--mid-grey: #919BA1;
+	--dark-grey: #67757E;
+	--black: #1C2F3B;
+	--accent: #1EEBB0;
+}
+
 body {
 	font-family: Inter, "Inter UI", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 0.875rem;
 
-	color: #fff;
-	font-weight: 400;
-	font-size: 1.5rem;
-	letter-spacing: -0.04em;
-	line-height: 2rem;
+	background-color: var(--black);
+	color: var(--light-grey);
 
-	background-color: #000;
-	background-image: url(res/background.svg);
-	background-size: 50vmin;
-	background-position: bottom right;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-
-	padding: 2rem 3rem;
+	width: calc(100% - 2rem);
+	max-width: 60rem;
+	margin: 6rem auto;
 }
 
-@media screen and (max-width: 40rem) {
-	body {
-		background-image: none;
-	}
+header {
+	margin-bottom: 1.25rem;
 }
 
-.main-logo {
-	height: 6rem;
-	margin-left: -1.1rem;
+header > img {
+	height: 4rem;
 }
 
-p {
-	margin-top: 2rem;
-}
-
-nav {
+main {
 	display: flex;
 	flex-direction: column;
+	gap: 1.25rem;
 }
 
-nav > a {
+h1 {
+	font-size: inherit;
+	font-weight: 600;
+	height: 3.125rem;
+	border-bottom: 1px solid var(--dark-grey);
+
 	display: flex;
 	align-items: center;
+	padding: 0.875rem;
+}
 
-	width: max-content;
-
+a {
 	text-decoration: none;
-	color: #fff;
-	opacity: 0.6;
-
-	margin-top: 0.2em;
-
-	transition: opacity 0.2s ease, color 0.2s ease;
+	color: inherit;
 }
 
-nav > a[href]:hover {
-	opacity: 1;
-	color: var(--link-colour);
+.link-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 3.125rem;
+	gap: 1.25rem;
 }
 
-nav > a::before {
+.link-grid .link-text {
+	display: flex;
+	align-items: center;
+	padding: 0.875rem;
+	gap: 0.875rem;
+	height: 3.125rem;
+}
+
+.link-grid .link-text::before {
 	content: "";
-	background: var(--link-icon);
 	background-color: currentColor;
-	background-size: 100%;
-	width: 1.75rem;
-	height: 1.75rem;
-	margin-right: 0.4em;
-	margin-bottom: 1px;
-	display: inline-block;
-	transition: opacity 0.2s ease, background-color 0.2s ease;
+	width: 0.875rem;
+	height: 0.875rem;
+
+	-webkit-mask-image: var(--link-icon);
+	mask-image: var(--link-icon);
+	-webkit-mask-size: cover;
+	mask-size: cover;
 }
 
-nav > a[href]::after {
+.link-grid .link-text::after {
 	content: "→";
-	margin-left: 0.4em;
-	margin-right: 0.4em;
-	transition: margin 0.2s ease;
+	margin-left: auto;
 }
 
-nav > a[href]:hover::after {
-	margin-left: 0.8em;
-	margin-right: 0em;
+.link-grid > .link-showcase {
+	display: flex;
+	flex-direction: column;
+	grid-row-end: span 4;
+
+	background-color: var(--black);
+	color: var(--light-grey);
+	border: 1px solid var(--dark-grey);
+
+	overflow: hidden;
+
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.05s ease;
 }
 
-nav > a.copy-link {
-	transition: opacity 0.2s ease, color 0.2s ease, transform 0.5s ease;
-}
-nav > a.copy-link::after {
-	content: "";
-	background: url(res/icons/pop-out-cutout.svg);
-	background-color: currentColor;
-	background-size: 100%;
-	width: 1.75rem;
-	height: 1.75rem;
-	margin-bottom: 1px;
-	display: inline-block;
+.link-grid > .link-showcase.link-showcase-large {
+	grid-column-end: span 2;
 }
 
-nav > a.copy-link:hover::after {
-	margin-left: 0.4em;
-	margin-right: 0.4em;
+.link-grid > .link-showcase:hover {
+	background-color: var(--link-colour);
+	color: var(--black);
+	border-color: var(--link-colour);
 }
 
-nav > a.copy-link.copied {
-	transform: translateY(0.2em);
-	color: #ccc;
-	transition: transform 0.05s ease;
+.link-grid > .link-showcase:active {
+	transform: scale(0.95);
+}
+
+.link-grid > .link-showcase > .link-text {
+	transition: transform 0.2s ease;
+}
+
+.link-grid > .link-showcase:hover > .link-text {
+	transform: translateY(-3.125rem);
+}
+
+.link-grid > .link-showcase > .background {
+	width: 100%;
+	flex-grow: 1;
+	background-image: var(--image);
+	background-size: cover;
+	background-position: center;
+
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.link-grid > .link-showcase:hover > .background {
+	opacity: 0.5;
+	transform: translateY(-3.125rem);
+}
+
+.link-grid > .link-single {
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--black);
+	color: var(--light-grey);
+	border: 1px solid var(--dark-grey);
+
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.05s ease, padding 0.2s ease;
+}
+
+.link-grid > .link-single:hover {
+	background-color: var(--link-colour);
+	color: var(--black);
+	border-color: var(--link-colour);
+	padding-left: 0.875rem;
+}
+
+.link-grid > .link-single:active {
+	transform: scale(0.95);
+}
+
+.artwork-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: auto;
+	gap: 1.25rem;
+}
+
+.artwork-grid > .artwork {
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--black);
+	color: var(--light-grey);
+	border: 1px solid var(--dark-grey);
+
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.05s ease;
+}
+
+.artwork-grid > .artwork > img {
+	width: 100%;
+}
+
+.artwork-grid > .artwork > p {
+	height: 3.125rem;
+	padding: 0.875rem;
+	display: flex;
+	align-items: center;
+	gap: 0.875rem;
+}
+
+.artwork-grid > .artwork > p::before {
+	content: "↓";
+}
+
+.artwork-grid > .artwork:hover {
+	background-color: var(--accent);
+	color: var(--black);
+	border-color: var(--accent);
+}
+
+.artwork-grid > .artwork:active {
+	transform: scale(0.95);
 }
