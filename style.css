@@ -27,6 +27,12 @@ body {
 	margin: 6rem auto;
 }
 
+@media screen and (max-width: 30rem) {
+	body {
+		width: 100%;
+	}
+}
+
 header {
 	margin-bottom: 1.25rem;
 }
@@ -62,6 +68,18 @@ a {
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: 3.125rem;
 	gap: 1.25rem;
+}
+
+@media screen and (max-width: 50rem) {
+	.link-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 30rem) {
+	.link-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 .link-grid .link-text {
@@ -105,6 +123,12 @@ a {
 
 .link-grid > .link-showcase.link-showcase-large {
 	grid-column-end: span 2;
+}
+
+@media screen and (max-width: 30rem) {
+	.link-grid > .link-showcase.link-showcase-large {
+		grid-column-end: span 1;
+	}
 }
 
 .link-grid > .link-showcase:hover {
@@ -185,7 +209,7 @@ a {
 }
 
 .artwork-grid > .artwork > p {
-	height: 3.125rem;
+	min-height: 3.125rem;
 	padding: 0.875rem;
 	display: flex;
 	align-items: center;
