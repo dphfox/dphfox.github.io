@@ -1,0 +1,23 @@
+{
+    "subject": "acct:Elttob@tech.lgbt",
+    "aliases": [
+        "https://tech.lgbt/@Elttob",
+        "https://tech.lgbt/users/Elttob"
+    ],
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://tech.lgbt/@Elttob"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://tech.lgbt/users/Elttob"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://tech.lgbt/authorize_interaction?uri={uri}"
+        }
+    ]
+}
