@@ -1,4 +1,4 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
 * {
 	margin: 0;
@@ -10,13 +10,13 @@
 	--light-grey: #C8CED2;
 	--mid-grey: #919BA1;
 	--dark-grey: #67757E;
-	--black: #1C2F3B;
+	--black: #0d0d0f;
 	--accent: #1EEBB0;
 }
 
 body {
-	font-family: Inter, "Inter UI", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 600;
+	font-family: "Plus Jakarta Sans", Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	font-size: 0.875rem;
 
 	background-color: var(--black);
@@ -49,13 +49,9 @@ main {
 
 h1 {
 	font-size: inherit;
-	font-weight: 600;
-	height: 3.125rem;
-	border-bottom: 1px solid var(--dark-grey);
-
-	display: flex;
-	align-items: center;
-	padding: 0.875rem;
+	font-weight: 700;
+	font-size: 1.5em;
+	margin-top: 2rem;
 }
 
 a {
@@ -102,11 +98,6 @@ a {
 	mask-size: cover;
 }
 
-.link-grid .link-text::after {
-	content: "→";
-	margin-left: auto;
-}
-
 .link-grid > .link-showcase {
 	display: flex;
 	flex-direction: column;
@@ -114,7 +105,8 @@ a {
 
 	background-color: var(--black);
 	color: var(--light-grey);
-	border: 1px solid var(--dark-grey);
+	border: 2px solid var(--dark-grey);
+	border-radius: 0.5rem;
 
 	overflow: hidden;
 
@@ -170,7 +162,8 @@ a {
 
 	background-color: var(--black);
 	color: var(--light-grey);
-	border: 1px solid var(--dark-grey);
+	border: 2px solid var(--dark-grey);
+	border-radius: 0.5rem;
 
 	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.05s ease, padding 0.2s ease;
 }
@@ -183,49 +176,5 @@ a {
 }
 
 .link-grid > .link-single:active {
-	transform: scale(0.95);
-}
-
-.artwork-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-auto-rows: auto;
-	gap: 1.25rem;
-}
-
-.artwork-grid > .artwork {
-	display: flex;
-	flex-direction: column;
-
-	background-color: var(--black);
-	color: var(--light-grey);
-	border: 1px solid var(--dark-grey);
-
-	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.05s ease;
-}
-
-.artwork-grid > .artwork > img {
-	width: 100%;
-}
-
-.artwork-grid > .artwork > p {
-	min-height: 3.125rem;
-	padding: 0.875rem;
-	display: flex;
-	align-items: center;
-	gap: 0.875rem;
-}
-
-.artwork-grid > .artwork > p::before {
-	content: "↓";
-}
-
-.artwork-grid > .artwork:hover {
-	background-color: var(--accent);
-	color: var(--black);
-	border-color: var(--accent);
-}
-
-.artwork-grid > .artwork:active {
 	transform: scale(0.95);
 }
