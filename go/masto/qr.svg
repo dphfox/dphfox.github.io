@@ -1,10 +1,22 @@
 <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="0.5" width="36" height="36" rx="3" fill="black" stroke="url(#paint0_linear_1936_2283)"/>
 <mask id="mask0_1936_2283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="33" height="33">
-<rect x="2.5" y="2.5" width="6" height="6" rx="1" stroke="black"/>
-<rect x="28.5" y="2.5" width="6" height="6" rx="1" stroke="black"/>
-<rect x="2.5" y="28.5" width="6" height="6" rx="1" stroke="black"/>
-<rect x="26.5" y="26.5" width="4" height="4" rx="0.5" stroke="black"/>
+<mask id="path-2-inside-1_1936_2283" fill="white">
+<rect x="2" y="2" width="7" height="7" rx="0.5"/>
+</mask>
+<rect x="2" y="2" width="7" height="7" rx="0.5" stroke="black" stroke-width="2" mask="url(#path-2-inside-1_1936_2283)"/>
+<mask id="path-3-inside-2_1936_2283" fill="white">
+<rect x="28" y="2" width="7" height="7" rx="0.5"/>
+</mask>
+<rect x="28" y="2" width="7" height="7" rx="0.5" stroke="black" stroke-width="2" mask="url(#path-3-inside-2_1936_2283)"/>
+<mask id="path-4-inside-3_1936_2283" fill="white">
+<rect x="2" y="28" width="7" height="7" rx="0.5"/>
+</mask>
+<rect x="2" y="28" width="7" height="7" rx="0.5" stroke="black" stroke-width="2" mask="url(#path-4-inside-3_1936_2283)"/>
+<mask id="path-5-inside-4_1936_2283" fill="white">
+<rect x="26" y="26" width="5" height="5" rx="0.5"/>
+</mask>
+<rect x="26" y="26" width="5" height="5" rx="0.5" stroke="black" stroke-width="2" mask="url(#path-5-inside-4_1936_2283)"/>
 <rect x="4" y="4" width="3" height="3" rx="0.5" fill="black"/>
 <rect x="30" y="4" width="3" height="3" rx="0.5" fill="black"/>
 <rect x="4" y="30" width="3" height="3" rx="0.5" fill="black"/>
@@ -452,7 +464,6 @@
 </mask>
 <g mask="url(#mask0_1936_2283)">
 <rect width="37" height="37" fill="url(#paint1_linear_1936_2283)"/>
-<path d="M13.1222 24.8778C14.6264 26.3821 16.7046 27.3125 19 27.3125C22.7656 27.3125 25.9464 24.8086 26.9683 21.375M13.1222 24.8778C11.6179 23.3736 10.6875 21.2954 10.6875 19C10.6875 14.4091 14.4091 10.6875 19 10.6875C21.2954 10.6875 23.3736 11.6179 24.8778 13.1222L13.1222 24.8778Z" stroke="white" stroke-width="2.375"/>
 </g>
 <defs>
 <linearGradient id="paint0_linear_1936_2283" x1="18.5" y1="0" x2="18.5" y2="37" gradientUnits="userSpaceOnUse">
