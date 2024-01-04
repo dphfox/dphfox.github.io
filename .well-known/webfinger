@@ -1,19 +1,19 @@
 {
-    "subject": "acct:Elttob@tech.lgbt",
+    "subject": "acct:phfox@tech.lgbt",
     "aliases": [
-        "https://tech.lgbt/@Elttob",
-        "https://tech.lgbt/users/Elttob"
+        "https://tech.lgbt/@phfox",
+        "https://tech.lgbt/users/phfox"
     ],
     "links": [
         {
             "rel": "http://webfinger.net/rel/profile-page",
             "type": "text/html",
-            "href": "https://tech.lgbt/@Elttob"
+            "href": "https://tech.lgbt/@phfox"
         },
         {
             "rel": "self",
             "type": "application/activity+json",
-            "href": "https://tech.lgbt/users/Elttob"
+            "href": "https://tech.lgbt/users/phfox"
         },
         {
             "rel": "http://ostatus.org/schema/1.0/subscribe",
